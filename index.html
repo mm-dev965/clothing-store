@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موضة ستور | المتجر العصري</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Cairo', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- شريط الإعلانات العلوي -->
+    <div class="bg-gray-900 text-white text-xs py-2 text-center font-medium">
+        🎉 شحن مجاني للطلبات فوق 1000 جنيه | خدمة الطلب السريع عبر الواتساب
+    </div>
+
+    <!-- الهيدر الرئيسي -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center gap-4">
+            
+            <!-- الشعار -->
+            <div class="flex items-center gap-2">
+                <span class="text-2xl font-black text-indigo-600 tracking-wider">موضة ستور</span>
+                <span class="text-xs bg-indigo-50 text-indigo-600 px-2 py-0.5 rounded-full font-bold">VIP</span>
+            </div>
+
+            <!-- شريط البحث السريع -->
+            <div class="hidden lg:flex flex-1 max-w-md mx-6">
+                <div class="relative w-full">
+                    <input type="text" placeholder="ابحث عما تريده هنا..." class="w-full bg-gray-100 border border-gray-200 rounded-xl px-4 py-2 text-sm focus:outline-none focus:border-indigo-600 transition">
+                    <span class="absolute left-3 top-2.5 text-gray-400">🔍</span>
+                </div>
+            </div>
+
+            <!-- أزرار التواصل والمساعدة -->
+            <div class="flex items-center gap-3">
+                <a href="https://wa.me/201234567890" target="_blank" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-2 transition shadow-sm">
+                    <span>💬 واتساب</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- شريط الفئات التفاعلي -->
+        <div class="bg-gray-900 text-white py-2.5 px-4">
+            <div class="max-w-7xl mx-auto flex items-center gap-8 overflow-x-auto text-sm font-medium whitespace-nowrap">
+                <a href="#" class="text-indigo-400 font-bold">🔥 العروض الكبرى</a>
+                <a href="#" class="hover:text-indigo-300 transition">ملابس حريمي</a>
+                <a href="#" class="hover:text-indigo-300 transition">ملابس رجالي</a>
+                <a href="#" class="hover:text-indigo-300 transition">ملابس أطفال</a>
+                <a href="#" class="hover:text-indigo-300 transition">هوديز شتوية</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- البنر الترويجي -->
+    <section class="relative bg-gradient-to-r from-indigo-900 via-indigo-950 to-gray-900 text-white py-16 px-4 text-center">
+        <div class="max-w-3xl mx-auto">
+            <span class="bg-white/10 text-indigo-200 border border-white/20 text-xs px-3 py-1 rounded-full font-bold uppercase tracking-widest inline-block mb-3">تشكيلة الشتاء الفاخرة</span>
+            <h1 class="text-3xl md:text-5xl font-black mb-4 leading-tight">اكتشف أحدث صيحات الموضة الآن</h1>
+            <p class="text-gray-300 text-sm md:text-base mb-6 font-light">جودة عالية، تصاميم عصرية، وتوصيل سريع حتى باب بيتك.</p>
+        </div>
+    </section>
+
+    <!-- قسم المنتجات -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="flex justify-between items-center mb-8 border-b border-gray-200 pb-4">
+            <h2 class="text-2xl font-black text-gray-900">المنتجات الأكثر طلباً</h2>
+            <span class="text-xs text-gray-500 font-bold bg-white px-3 py-1 rounded-lg border border-gray-200">الكل (4 منتجات)</span>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" style="direction: rtl;">
+            
+            <!-- منتج 1: حريمي -->
+            <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition duration-300 overflow-hidden border border-gray-100 flex flex-col justify-between group">
+                <div>
+                    <div class="h-60 bg-gray-100 overflow-hidden relative">
+                        <span class="absolute top-3 right-3 bg-red-500 text-white text-xs font-bold px-2.5 py-1 rounded-lg z-10">خصم 20%</span>
+                        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-4">
+                        <span class="text-xs text-indigo-600 font-bold uppercase tracking-wider block mb-1">ملابس حريمي</span>
+                        <h3 class="font-bold text-base text-gray-900 mb-2">هودي كاجوال حريمي أنيق</h3>
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-indigo-600 font-black text-lg">450 ج.م</span>
+                            <span class="text-gray-400 text-xs line-through">550 ج.م</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 pt-0">
+                    <a href="https://wa.me/201234567890?text=مرحباً، أريد طلب منتج: هودي كاجوال حريمي بسعر 450 ج.م" target="_blank" 
+                       class="flex justify-center items-center gap-2 w-full bg-green-600 hover:bg-green-700 text-white py-2.5 rounded-xl transition font-bold text-sm shadow-sm">
+                        <span>اطلب الآن عبر واتساب</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- منتج 2: رجالي -->
+            <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition duration-300 overflow-hidden border border-gray-100 flex flex-col justify-between group">
+                <div>
+                    <div class="h-60 bg-gray-100 overflow-hidden relative">
+                        <span class="absolute top-3 right-3 bg-indigo-600 text-white text-xs font-bold px-2.5 py-1 rounded-lg z-10">جديد</span>
+                        <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-4">
+                        <span class="text-xs text-indigo-600 font-bold uppercase tracking-wider block mb-1">ملابس رجالي</span>
+                        <h3 class="font-bold text-base text-gray-900 mb-2">هودي كاجوال رجالي فاخر</h3>
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-indigo-600 font-black text-lg">500 ج.م</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 pt-0">
+                    <a href="https://wa.me/201234567890?text=مرحباً، أريد طلب منتج: هودي كاجوال رجالي بسعر 500 ج.م" target="_blank" 
+                       class="flex justify-center items-center gap-2 w-full bg-green-600 hover:bg-green-700 text-white py-2.5 rounded-xl transition font-bold text-sm shadow-sm">
+                        <span>اطلب الآن عبر واتساب</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- منتج 3: أطفال أولاد -->
+            <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition duration-300 overflow-hidden border border-gray-100 flex flex-col justify-between group">
+                <div>
+                    <div class="h-60 bg-gray-100 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1503944583220-7eeec8990c7d?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-4">
+                        <span class="text-xs text-indigo-600 font-bold uppercase tracking-wider block mb-1">ملابس أطفال</span>
+                        <h3 class="font-bold text-base text-gray-900 mb-2">هودي أطفال أولاد مريح</h3>
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-indigo-600 font-black text-lg">300 ج.م</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 pt-0">
+                    <a href="https://wa.me/201234567890?text=مرحباً، أريد طلب منتج: هودي أطفال أولاد بسعر 300 ج.م" target="_blank" 
+                       class="flex justify-center items-center gap-2 w-full bg-green-600 hover:bg-green-700 text-white py-2.5 rounded-xl transition font-bold text-sm shadow-sm">
+                        <span>اطلب الآن عبر واتساب</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- منتج 4: أطفال بنات -->
+            <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition duration-300 overflow-hidden border border-gray-100 flex flex-col justify-between group">
+                <div>
+                    <div class="h-60 bg-gray-100 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-4">
+                        <span class="text-xs text-indigo-600 font-bold uppercase tracking-wider block mb-1">ملابس أطفال</span>
+                        <h3 class="font-bold text-base text-gray-900 mb-2">هودي أطفال بنات مميز</h3>
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-indigo-600 font-black text-lg">350 ج.م</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 pt-0">
+                    <a href="https://wa.me/201234567890?text=مرحباً، أريد طلب منتج: هودي أطفال بنات بسعر 350 ج.م" target="_blank" 
+                       class="flex justify-center items-center gap-2 w-full bg-green-600 hover:bg-green-700 text-white py-2.5 rounded-xl transition font-bold text-sm shadow-sm">
+                        <span>اطلب الآن عبر واتساب</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- الفوتر -->
+    <footer class="bg-gray-900 text-white py-10 px-4 mt-16 text-center text-sm">
+        <p class="text-gray-400">جميع الحقوق محفوظة © 2026 موضة ستور - مدعوم بالطلب السريع عبر الواتساب.</p>
+    </footer>
+
+</body>
+</html>
