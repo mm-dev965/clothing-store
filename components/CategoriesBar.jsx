@@ -60,10 +60,10 @@ export default function CategoriesBar() {
   ];
 
   return (
-    <div className="w-full bg-lime-400 py-3 px-4 shadow-inner relative z-50 overflow-x-auto" dir="rtl">
-      <div className="max-w-7xl mx-auto flex flex-nowrap md:flex-wrap justify-start md:justify-center items-center gap-6 lg:gap-10 text-gray-900 font-extrabold text-sm sm:text-base whitespace-nowrap scrollbar-none">
+    <div className="w-full bg-lime-400 py-3 px-4 shadow-inner relative z-50" dir="rtl">
+      <div className="max-w-7xl mx-auto flex flex-wrap justify-center items-center gap-6 lg:gap-10 text-gray-900 font-extrabold text-sm sm:text-base">
         {categoriesData.map((cat, index) => (
-          <div key={index} className="relative group cursor-pointer py-1 shrink-0">
+          <div key={index} className="relative group cursor-pointer py-1">
             {/* القسم الرئيسي */}
             <div className="flex items-center gap-1.5 hover:text-emerald-900 transition-colors">
               {cat.name} <span className="text-xs opacity-75">›</span>
@@ -74,7 +74,7 @@ export default function CategoriesBar() {
               <div className="px-4 py-1.5 mb-1 border-b border-zinc-800 text-xs text-amber-400 font-bold text-center">
                 أقسام {cat.name}
               </div>
-              {cat.subcategories.submap ? null : cat.subcategories.map((sub, subIdx) => (
+              {cat.subcategories.map((sub, subIdx) => (
                 <Link
                   key={subIdx}
                   href={sub.path}
