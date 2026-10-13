@@ -1,68 +1,91 @@
 'use client';
-import { useState } from 'react';
+import Link from 'next/link';
 
 export default function CategoriesBar() {
-  const [activeDropdown, setActiveDropdown] = useState(null);
-
   const categoriesData = [
     {
-      name: "الأحذية الفاخرة",
-      subcategories: ["أحذية رجالي", "أحذية حريمي", "أحذية أطفال", "أحذية رياضية"]
-    },
-    {
-      name: "ملابس الخروج",
-      subcategories: ["جاكيتات ومعاطف", "تنانير وفساتين", "ترنجات كاجوال", "قمصان وبناطيل"]
-    },
-    {
-      name: "الملابس الداخلية القطنية",
-      subcategories: ["ملابس داخلية رجالي", "ملابس داخلية حريمي", "ملابس أطفال قطنية", "بيجامات البيت"]
-    },
-    {
-      name: "أزياء الأطفال العصرية",
-      subcategories: ["أولاد (مواليد وأطفال)", "بنات (مواليد وأطفال)", "ملابس أطفال قطيفة", "أطقم الخروج للأطفال"]
+      name: "الأناقة الرجالية",
+      subcategories: [
+        { name: "بدلات رسمية", path: "/mens-elegance/suits" },
+        { name: "قمصان كلاسيك وكاجوال", path: "/mens-elegance/shirts" },
+        { name: "سويت شيرت وهوديز", path: "/mens-elegance/hoodies" },
+        { name: "بنطلونات وجينز", path: "/mens-elegance/pants" }
+      ]
     },
     {
       name: "الموضة النسائية",
-      subcategories: ["أطقم كاجوال", "سواريهات ومناسبات", "عبايات وملابس بيتي", "إكسسوارات نسائية"]
+      subcategories: [
+        { name: "أطقم كاجوال", path: "/womens-fashion/casual" },
+        { name: "سواريهات ومناسبات", path: "/womens-fashion/evening" },
+        { name: "عبايات وملابس بيتي", path: "/womens-fashion/abayas-homewear" },
+        { name: "إكسسوارات نسائية", path: "/womens-fashion/accessories" }
+      ]
     },
     {
-      name: "الأناقة الرجالية",
-      subcategories: ["بدلات رسمية", "قمصان كلاسيك وكاجوال", "سويت شيرت وهوديز", "بنطلونات وجينز"]
+      name: "أزياء الأطفال العصرية",
+      subcategories: [
+        { name: "أولاد (مواليد وأطفال)", path: "/kids-fashion/boys" },
+        { name: "بنات (مواليد وأطفال)", path: "/kids-fashion/girls" },
+        { name: "ملابس أطفال قطيفة", path: "/kids-fashion/velour" },
+        { name: "أطقم الخروج للأطفال", path: "/kids-fashion/outfits" }
+      ]
+    },
+    {
+      name: "الملابس الداخلية القطنية",
+      subcategories: [
+        { name: "ملابس داخلية رجالي", path: "/mens-underwear" },
+        { name: "ملابس داخلية حريمي", path: "/womens-underwear" },
+        { name: "ملابس أطفال قطنية", path: "/kids-cotton" },
+        { name: "بيجامات البيت", path: "/home-pyjamas" }
+      ]
+    },
+    {
+      name: "ملابس الخروج",
+      subcategories: [
+        { name: "جاكيتات ومعاطف", path: "/jackets" },
+        { name: "تنانير وفساتين", path: "/skirts-dresses" },
+        { name: "ترنجات كاجوال", path: "/casual-tracksuits" },
+        { name: "قمصان وبناطيل", path: "/shirts-pants" }
+      ]
+    },
+    {
+      name: "الأحذية الفاخرة",
+      subcategories: [
+        { name: "أحذية رجالي", path: "/mens-shoes" },
+        { name: "أحذية حريمي", path: "/womens-shoes" },
+        { name: "أحذية أطفال", path: "/kids-shoes" },
+        { name: "أحذية رياضية", path: "/sports-shoes" }
+      ]
     }
   ];
 
   return (
-    <div className="w-full bg-lime-400 py-3.5 px-4 shadow-inner relative z-50" dir="rtl">
-      <div className="max-w-7xl mx-auto flex flex-wrap justify-center items-center gap-6 lg:gap-10 text-gray-900 font-extrabold text-sm sm:text-base">
+    <div className="w-full bg-lime-400 py-3 px-4 shadow-inner relative z-50 overflow-x-auto" dir="rtl">
+      <div className="max-w-7xl mx-auto flex flex-nowrap md:flex-wrap justify-start md:justify-center items-center gap-6 lg:gap-10 text-gray-900 font-extrabold text-sm sm:text-base whitespace-nowrap scrollbar-none">
         {categoriesData.map((cat, index) => (
-          <div 
-            key={index} 
-            className="relative group cursor-pointer py-1"
-            onMouseEnter={() => setActiveDropdown(index)}
-            onMouseLeave={() => setActiveDropdown(null)}
-          >
+          <div key={index} className="relative group cursor-pointer py-1 shrink-0">
             {/* القسم الرئيسي */}
             <div className="flex items-center gap-1.5 hover:text-emerald-900 transition-colors">
               {cat.name} <span className="text-xs opacity-75">›</span>
             </div>
 
-            {/* القائمة المنسدلة مضبوطة وثابتة تحت القسم مباشرة */}
-            {activeDropdown === index && (
-              <div className="absolute top-full left-0 w-60 bg-black text-white rounded-2xl shadow-2xl py-3 mt-1.5 border border-zinc-800 flex flex-col z-50">
-                <div className="px-4 py-1.5 mb-1 border-b border-zinc-800 text-xs text-amber-400 font-bold text-center">
-                  أقسام {cat.name}
-                </div>
-                {cat.subcategories.map((sub, subIdx) => (
-                  <span 
-                    key={subIdx} 
-                    className="px-4 py-2.5 text-sm text-gray-200 hover:bg-zinc-800 hover:text-amber-400 transition-colors cursor-pointer flex items-center justify-between"
-                  >
-                    {sub}
-                    <span className="text-xs text-zinc-500">←</span>
-                  </span>
-                ))}
+            {/* القائمة المنسدلة */}
+            <div className="absolute top-full right-0 w-60 bg-black text-white rounded-2xl shadow-2xl py-3 mt-1.5 border border-zinc-800 flex flex-col z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150">
+              <div className="px-4 py-1.5 mb-1 border-b border-zinc-800 text-xs text-amber-400 font-bold text-center">
+                أقسام {cat.name}
               </div>
-            )}
+              {cat.subcategories.submap ? null : cat.subcategories.map((sub, subIdx) => (
+                <Link
+                  key={subIdx}
+                  href={sub.path}
+                  prefetch={true}
+                  className="px-4 py-2.5 text-sm text-gray-200 hover:bg-zinc-800 hover:text-amber-400 transition-colors cursor-pointer flex items-center justify-between"
+                >
+                  <span>{sub.name}</span>
+                  <span className="text-xs text-zinc-500">←</span>
+                </Link>
+              ))}
+            </div>
           </div>
         ))}
       </div>

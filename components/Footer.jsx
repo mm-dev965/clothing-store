@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Footer() {
   return (
     <footer className="bg-black text-gray-300 pt-16 pb-8 border-t border-zinc-800">
@@ -20,11 +22,11 @@ export default function Footer() {
         <div dir="rtl">
           <h4 className="text-white text-base font-extrabold mb-4 border-b border-zinc-800 pb-2">روابط سريعة</h4>
           <ul className="space-y-2.5 text-sm">
-            <li><a href="#" className="hover:text-lime-400 transition-colors">الرئيسية</a></li>
-            <li><a href="#" className="hover:text-lime-400 transition-colors">الأحذية الفاخرة</a></li>
-            <li><a href="#" className="hover:text-lime-400 transition-colors">ملابس الخروج</a></li>
-            <li><a href="#" className="hover:text-lime-400 transition-colors">أزياء الأطفال العصرية</a></li>
-            <li><a href="#" className="hover:text-lime-400 transition-colors">من نحن</a></li>
+            <li><Link href="/" className="hover:text-lime-400 transition-colors">الرئيسية</Link></li>
+            <li><Link href="/sports-shoes" className="hover:text-lime-400 transition-colors">الأحذية الفاخرة</Link></li>
+            <li><Link href="/jackets" className="hover:text-lime-400 transition-colors">ملابس الخروج</Link></li>
+            <li><Link href="/kids-fashion/boys" className="hover:text-lime-400 transition-colors">أزياء الأطفال العصرية</Link></li>
+            <li><Link href="/about" className="hover:text-lime-400 transition-colors">من نحن</Link></li>
           </ul>
         </div>
 
